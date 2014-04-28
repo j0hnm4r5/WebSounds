@@ -1,5 +1,5 @@
 // Load in packages
-var express = require('express'), 
+var express = require('express'),
 	http = require('http'),
 	app = express(),
 	socketServer = http.createServer(app),
@@ -19,5 +19,5 @@ var server = socketServer.listen(process.env.PORT || 5000, function() {
 io.sockets.on('connection', function(socket) {
 	socket.on('message', function(message) {
 		io.sockets.emit('message', message);
-	}); 
+	});
 });
