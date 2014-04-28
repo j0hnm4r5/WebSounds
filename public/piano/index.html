@@ -2,13 +2,79 @@
 <head>
 	<title>Piano</title>
 	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 </head>
 
-<body style="background-color:black;">
+<body style="background-color:#202020;">
 
 	<div id="keyboard">
-		<div id="accidentals"></div>
-		<div id="naturals"></div>
+		<div id="portals">
+			<div class="led thirty" id="c1-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="d1f-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="d1-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="e1f-p" style="background-color:#000000;"></div>
+			<div class="led thirty" id="e1-p" style="background-color:#000000;"></div>
+			<div class="led thirty" id="f1-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="g1f-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="g1-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="a1f-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="a1-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="b1f-p" style="background-color:#000000;"></div>
+			<div class="led thirty" id="b1-p" style="background-color:#000000;"></div>
+			<div class="led thirty" id="c2-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="d2f-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="d2-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="e2f-p" style="background-color:#000000;"></div>
+			<div class="led thirty" id="e2-p" style="background-color:#000000;"></div>
+			<div class="led thirty" id="f2-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="g2f-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="g2-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="a2f-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="a2-p" style="background-color:#000000;"></div>
+			<div class="led twenty" id="b2f-p" style="background-color:#000000;"></div>
+			<div class="led thirty" id="b2-p" style="background-color:#000000;"></div>
+			<div class="led fourty" id="c3-p" style="background-color:#000000;"></div>
+		</div>
+		<div id="naturals">
+			<div class="key" id="c1" style="background-color:#ffffff;"><div class="keyboard-label">A</div></div>
+			<div class="key" id="d1" style="background-color:#ffffff;"><div class="keyboard-label">S</div></div>
+			<div class="key" id="e1" style="background-color:#ffffff;"><div class="keyboard-label">D</div></div>
+			<div class="key" id="f1" style="background-color:#ffffff;"><div class="keyboard-label">F</div></div>
+			<div class="key" id="g1" style="background-color:#ffffff;"><div class="keyboard-label">G</div></div>
+			<div class="key" id="a1" style="background-color:#ffffff;"><div class="keyboard-label">H</div></div>
+			<div class="key" id="b1" style="background-color:#ffffff;"><div class="keyboard-label">J</div></div>
+			<div class="key" id="c2" style="background-color:#ffffff;"><div class="keyboard-label">C</div></div>
+			<div class="key" id="d2" style="background-color:#ffffff;"><div class="keyboard-label">V</div></div>
+			<div class="key" id="e2" style="background-color:#ffffff;"><div class="keyboard-label">B</div></div>
+			<div class="key" id="f2" style="background-color:#ffffff;"><div class="keyboard-label">N</div></div>
+			<div class="key" id="g2" style="background-color:#ffffff;"><div class="keyboard-label">M</div></div>
+			<div class="key" id="a2" style="background-color:#ffffff;"><div class="keyboard-label">,</div></div>
+			<div class="key" id="b2" style="background-color:#ffffff;"><div class="keyboard-label">.</div></div>
+			<div class="key" id="c3" style="background-color:#ffffff;"><div class="keyboard-label">/</div></div>
+		</div>
+		<div id="accidentals">
+			<div class="spacer thirty"></div>
+			<div class="key" id="d1f" style="background-color:#000000;"><div class="keyboard-label">Q</div></div>
+			<div class="spacer twenty"></div>
+			<div class="key" id="e1f" style="background-color:#000000;"><div class="keyboard-label">W</div></div>
+			<div class="spacer sixty"></div>
+			<div class="key" id="g1f" style="background-color:#000000;"><div class="keyboard-label">E</div></div>
+			<div class="spacer twenty"></div>
+			<div class="key" id="a1f" style="background-color:#000000;"><div class="keyboard-label">R</div></div>
+			<div class="spacer twenty"></div>
+			<div class="key" id="b1f" style="background-color:#000000;"><div class="keyboard-label">T</div></div>
+			<div class="spacer sixty"></div>
+			<div class="key" id="d2f" style="background-color:#000000;"><div class="keyboard-label">Y</div></div>
+			<div class="spacer twenty"></div>
+			<div class="key" id="e2f" style="background-color:#000000;"><div class="keyboard-label">U</div></div>
+			<div class="spacer sixty"></div>
+			<div class="key" id="g2f" style="background-color:#000000;"><div class="keyboard-label">I</div></div>
+			<div class="spacer twenty"></div>
+			<div class="key" id="a2f" style="background-color:#000000;"><div class="keyboard-label">O</div></div>
+			<div class="spacer twenty"></div>
+			<div class="key" id="b2f" style="background-color:#000000;"><div class="keyboard-label">P</div></div>
+			<div class="spacer sixty"></div>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="../socketio.min.js"></script>

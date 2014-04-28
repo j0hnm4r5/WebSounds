@@ -1,129 +1,103 @@
-// This connects to our own server.
+// Start the socket
 var socket = io.connect('/');
 
-// Variables for html elements.
-var controls = document.getElementById("controls"),
-	btn = controls.querySelector("button"),
-	input = controls.querySelector("#input"),
-	textbox = document.getElementById("text");
 
-// Variables for color changes.
-var clr = [0, 0, 0],
-	rgb_index = 0;
+var keys = ["c1", "d1f", "d1", "e1f", "e1", "f1", "g1f", "g1", "a1f", "a1", "b1f", "b1", "c2", "d2f", "d2", "e2f", "e2", "f2", "g2f", "g2", "a2f", "a2", "b2f", "b2", "c3"];
 
-// Variables for submit button text.
-var submits = ["Submit", "Hit it!", "Yesss...", "What's up?", "MS Paint", "RGB!", "Color me.", "Add it!", "Rainbows", "No!", "Smack dat", "Mmhmmmmm", "Generate"];
+var iokeys = keys.map(function() {
+	return 0;
+});
 
-// ---------------------
+var keyboard = keys.map(function(i) {
+	return document.getElementById(i);
+});
 
-
-function makeSound(hz) {
-	var data = [];
-	var sampleRateHz = 44100;
-
-	var seconds = .25;
-
-	for (var i = 0; i < sampleRateHz * seconds; i++) {
-		data[i] = Math.round(128 + 127 * Math.sin(i * 2 * Math.PI * hz / sampleRateHz));
-	}
+var portals = keys.map(function(i) {
+	return document.getElementById(i + "-p");
+});
 
 
-	//Riffwave stuff
 
-	var audio = new Audio();
-	var wave = new RIFFWAVE();
 
-	wave.header.sampleRate = sampleRateHz;
-	wave.header.numChannels = 1;
+// MOUSE CONTROL -------------------
 
-	wave.Make(data);
-	audio.src = wave.dataURI;
+document.body.onmousedown = function(e) {
+	e = e || window.event;
+	var elementId = e.target.id;
 
-	return audio;
+	n = keys.indexOf(elementId);
+	iokeys[n] = 1;
 
+	send();
 }
+
+document.body.onmouseup = function(e) {
+	e = e || window.event;
+	var elementId = e.target.id;
+
+	n = keys.indexOf(elementId);
+	iokeys[n] = 0;
+
+	send();
+}
+
+// KEYBOARD CONTROL ----------------
+
+var keychars = keys.map(function(i) {
+	num = document.getElementById(i).firstElementChild.innerHTML.charCodeAt(0);
+	// For some reason, the charCode and keyCode numbers are not the same for ',' and  '.'  and '/'
+	// These remap those numbers so the keys presses below work correctly.
+	if (num == 80) {
+		return 188;
+	} else if (num == 46) {
+		return 190;
+	} else if (num == 47) {
+		return 191;
+	} else {
+		return num;
+	}
+});
+
+window.onkeydown = function(e) {
+
+	var c = e.which || e.keyCode;
+	var n = keychars.indexOf(c);
+	iokeys[n] = 1;
+
+	send();
+}
+
+window.onkeyup = function(e) {
+
+	var c = e.which || e.keyCode;
+	var n = keychars.indexOf(c);
+	iokeys[n] = 0;
+
+	send();
+}
+
+
+
+// SEND AND RECEIVE ------------------
 
 var send = function() {
-	// Sets msg to content of input box (minus extraneous whitespace), then removes text from input box.
-	var msg = input.textContent.trim();
-	input.innerHTML = "";
+	socket.emit('message', {"iokeys" : iokeys});
+}
 
-	msg = parseInt(msg);
+var receive = function(msg) {
 
-	if (!isNaN(msg)) {
-		if (rgb_index % 3 == 0) {
-			clr[0] = msg % 256;
-		} else if (rgb_index % 3 == 1) {
-			clr[1] = msg % 256;
+	// Light up LED if key is being pressed.
+	for (var i = 0; i < portals.length; i++) {
+		if (msg[i] == 1) {
+			portals[i].style.background = "#ff0000";
 		} else {
-			clr[2] = msg % 256;
+			portals[i].style.background = "#000000";
 		}
-
-		rgb_index++;
-
-	} else {
-		console.log("NaN");
-	}
-
-
-	// Emits json packet to socket with name "message".
-	socket.emit('message', {
-		"clr" : clr,
-		"rgb_index" : rgb_index,
-		"textmsg" : msg
-	});
-
-	btn.innerHTML = submits[rgb_index % submits.length];
-
-	var sound = makeSound(msg);
-	sound.play();
+	};
 
 }
 
-// ---------------------
-
-var receive = function(clr, rgb_index, textmsg) {
-
-	// If background is light, make all drawing elements black. If it's dark, make everything white.
-	if (clr[0] + clr[1] + clr[2] > 400) {
-		btn.style.color = "black";
-		input.style.background = "black";
-		input.style.color = "white";
-		controls.style.borderColor = "black";
-		document.body.style.color = "black";
-	} else {
-		btn.style.color = "white";
-		input.style.background = "white";
-		input.style.color = "black";
-		controls.style.borderColor = "white";
-		document.body.style.color = "white";
-	}
-
-	// Change the background color
-	document.body.style.backgroundColor = "rgb(" + clr[0] + "," + clr[1] + "," + clr[2] + ")";
-	btn.style.backgroundColor = "rgb(" + clr[0] + "," + clr[1] + "," + clr[2] + ")";
-
-	// Put the number entered in a div inside textbox. Set the color to the background color at the time.
-	var number = document.createElement("span");
-	number.style.color = btn.style.backgroundColor = "rgb(" + clr[0] + "," + clr[1] + "," + clr[2] + ")";
-	number.innerHTML = textmsg % 256 + " ";
-	textbox.appendChild(number);
-}
-
-// ---------------------
-
-// On button click, initiate send()
-btn.addEventListener("click", send, false);
-
-// If enter key is pressed, initiate send()
-window.onkeydown = function(e) {
-	if (e.keyCode == 13 || e.charCode == 13) { // Enter key
-		send();
-		return false;
-	}
-}
-
-// If message with type "message" is in socket, and the ID does not match your own, initiate receive()
+// Send off array to receive() when sockets receives a message.
 socket.on('message', function(msg) {
-	receive(msg.clr, msg.rgb_index, msg.textmsg);
+	receive(msg.iokeys);
 });

@@ -1,17 +1,113 @@
+body {
+	color: white;
+	font-family: 'Varela Round', 'sans-serif';
+	font-size: .75em;
+}
+
 #keyboard {
+	position: relative;
 	margin: 150px auto;
 	width: 600px;
-	height: 200px;
-
-	background-color: red;
+	height: 220px;
+	border: 20px solid #303030;
+	border-radius: 20px;
 }
 
-#accidentals {
-	height: 100px;
-	background-color: blue;
-}
+
+/* Naturals */
 
 #naturals {
-	height: 100px;
-	background-color: green;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#naturals .key {
+	float: left;
+	width: 38px;
+	height: 100%;
+	background-color: #ffffff;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+
+/* Accidentals */
+
+#accidentals {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	bottom: 100px;
+}
+
+#accidentals .key {
+	float: left;
+	width: 20px;
+	height: 100%;
+	background-color: #000000;
+	border-radius: 0 0 5px 5px;
+}
+
+#accidentals .spacer {
+	float: left;
+	height: 100%;
+}
+
+/* Portals */
+
+#portals {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 200px;
+}
+
+#portals .led {
+	float: left;
+	height: 100%;
+}
+
+/* Sizes */
+.twenty {
+	width: 20px;
+}
+
+.thirty {
+	width: 30px;
+}
+
+.fourty {
+	width: 40px;
+}
+
+.sixty {
+	width: 60px;
+}
+
+
+/* Change key color on hover */
+#naturals .key:hover {
+	background-color: #dddddd !important;
+}
+
+#accidentals .key:hover {
+	background-color: #333333 !important;
+}
+
+
+/* Keyboard Labels */
+#naturals .keyboard-label {
+	text-align: center;
+	color: #000000;
+	margin-top: 175px;
+}
+
+#accidentals .keyboard-label {
+	text-align: center;
+	color: #ffffff;
+	margin-top: 75px;
 }
