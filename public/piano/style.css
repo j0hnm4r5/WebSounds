@@ -1,0 +1,17 @@
+#keyboard {
+	margin: 150px auto;
+	width: 600px;
+	height: 200px;
+
+	background-color: red;
+}
+
+#accidentals {
+	height: 100px;
+	background-color: blue;
+}
+
+#naturals {
+	height: 100px;
+	background-color: green;
+}
