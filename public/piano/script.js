@@ -1,3 +1,4 @@
+console.log(Date.now())
 // Start the socket
 var socket = io.connect('/');
 
@@ -152,9 +153,10 @@ var frequencies = harmonics.map(function(i) {
 
 var audioLibSamples = frequencies.map(function(hz) {
 	param = ["saw",0.0000,0.4000,0.20,0.25,0.0000,0.10,20.0000,hz,20.0000,1.0000,1.0000,0.0000,0.0100,-0.3000,-1.0000,1.0000,0.0000,0.0000,-1.0000,0.0,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,-1.0000];
+	console.log(Date.now())
 	return jsfxlib.createWave(param);
 });
-
+console.log(Date.now())
 document.getElementById("connections").innerHTML = "LOADING COMPLETE!";
 spinner.stop()
 target.parentNode.removeChild(target);
