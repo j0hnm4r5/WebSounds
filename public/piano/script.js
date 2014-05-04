@@ -1,30 +1,5 @@
-console.log(Date.now())
 // Start the socket
 var socket = io.connect('/');
-
-// LOADING BAR -------------------
-var opts = {
-	lines: 13, // The number of lines to draw
-	length: 0, // The length of each line
-	width: 5, // The line thickness
-	radius: 12, // The radius of the inner circle
-	corners: 1, // Corner roundness (0..1)
-	rotate: 0, // The rotation offset
-	direction: 1, // 1: clockwise, -1: counterclockwise
-	color: '#ffffff', // #rgb or #rrggbb or array of colors
-	speed: 1.3, // Rounds per second
-	trail: 100, // Afterglow percentage
-	shadow: false, // Whether to render a shadow
-	hwaccel: false, // Whether to use hardware acceleration
-	className: 'spinner', // The CSS class to assign to the spinner
-	zIndex: 2e9, // The z-index (defaults to 2000000000)
-	top: '50%', // Top position relative to parent
-	left: '50%' // Left position relative to parent
-};
-var target = document.getElementById("loading");
-var spinner = new Spinner(opts).spin(target);
-
-document.getElementById("connections").innerHTML = "LOADING...";
 
 
 // CREATE UNIQUE USERCOLOR -------------------
@@ -71,7 +46,6 @@ var addRollColumn = function(array) {
 			row.style.background = "#303030";
 		} else {
 			row.style.background = "#" + array[j].toString(16);
-			console.log(array[j].toString(16));
 		}
 		row.className = "rollRow";
 		column.appendChild(row);
@@ -153,13 +127,11 @@ var frequencies = harmonics.map(function(i) {
 
 var audioLibSamples = frequencies.map(function(hz) {
 	param = ["saw",0.0000,0.4000,0.20,0.25,0.0000,0.10,20.0000,hz,20.0000,1.0000,1.0000,0.0000,0.0100,-0.3000,-1.0000,1.0000,0.0000,0.0000,-1.0000,0.0,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,-1.0000];
-	console.log(Date.now())
+
+
 	return jsfxlib.createWave(param);
 });
-console.log(Date.now())
-document.getElementById("connections").innerHTML = "LOADING COMPLETE!";
-spinner.stop()
-target.parentNode.removeChild(target);
+
 
 // SEND AND RECEIVE ------------------
 
