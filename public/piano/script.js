@@ -1,7 +1,6 @@
 // Start the socket
 var socket = io.connect('/');
 
-
 // CREATE UNIQUE USERCOLOR -------------------
 var userColor = Math.round(Math.random() * 0xFFFFFF);
 
@@ -68,7 +67,7 @@ document.body.onmousedown = function(e) {
 	var elementId = e.target.id;
 
 	n = keys.indexOf(elementId);
-	iokeys[n] = 1;
+	iokeys[n] = userColor;
 
 	send();
 };
@@ -126,7 +125,7 @@ var frequencies = harmonics.map(function(i) {
 });
 
 var audioLibSamples = frequencies.map(function(hz) {
-	param = ["saw",0.0000,0.4000,0.20,0.25,0.0000,0.10,20.0000,hz,20.0000,1.0000,1.0000,0.0000,0.0100,-0.3000,-1.0000,1.0000,0.0000,0.0000,-1.0000,0.0,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,-1.0000];
+	param = ["sin",0.0000,0.4000,0.20,0.25,0.0000,0.10,20.0000,hz,20.0000,1.0000,1.0000,0.0000,0.0100,-0.3000,-1.0000,1.0000,0.0000,0.0000,-1.0000,0.0,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,-1.0000];
 
 
 	return jsfxlib.createWave(param);
@@ -140,21 +139,16 @@ var send = function() {
 };
 
 // Connection counter
-var footerDiv = document.getElementById("footer");
-var connectionsDiv = document.getElementById("connections");
 var connectionCounter = function(connections) {
 	var val = Math.round(connections * 10);
 	document.body.style.background = "rgb(" + [val, val, val].join(",") + ")";
 
-	if (connections == 1) {
-		footerDiv.style.color = "#ffffff";
-		connectionsDiv.innerHTML = "You're all alone.";
-	} else if (connections > 1 && connections < 13) {
-		footerDiv.style.color = "#ffffff";
-		connectionsDiv.innerHTML = connections + " musicians";
-	} else if (connections >= 13) {
-		footerDiv.style.color = "#000000";
-		connectionsDiv.innerHTML = connections + " musicians";
+	if (connections > 13) {
+		document.getElementById("instructions").style.color = "#303030"
+		document.getElementsByTagName("a").style.color = "#303030"
+	} else {
+		document.getElementById("instructions").style.color = "#bbbbbb"
+		document.getElementsByTagName("a").style.color = "#bbbbbb"
 	}
 };
 

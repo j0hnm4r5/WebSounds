@@ -1,12 +1,17 @@
 body {
-	color: white;
+	color: #bbbbbb;
 	font-family: 'Varela Round', 'sans-serif';
 	font-size: .75em;
 }
 
+a:link {color: inherit;}
+a:visited {color: inherit;}
+a:hover {color: inherit;}
+a:active {color: inherit;}
+
 #keyboard {
 	position: relative;
-	margin: 150px auto 40px;
+	margin: 100px auto 40px;
 	width: 600px;
 	height: 220px;
 	border: 20px solid #303030;
@@ -126,12 +131,10 @@ body {
 	width: 100%;
 }
 
-/* Footer */
-
-#footer {
-	position: fixed;
-	left: 10px;
-	bottom: 0;
-	width: 100%;
-	height: 30px;
+/* Instructions */
+#instructions {
+	position: relative;
+	margin: 40px auto;
+	width: 600px;
+	height: 100px;
 }
