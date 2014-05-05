@@ -18,7 +18,6 @@ a:active {color: inherit;}
 	border-radius: 20px;
 }
 
-
 /* Naturals */
 
 #naturals {
@@ -137,4 +136,32 @@ a:active {color: inherit;}
 	margin: 40px auto;
 	width: 600px;
 	height: 100px;
+}
+
+#close {
+	position: absolute;
+	text-align: center;
+	top: 0px;
+	right: 0px;
+	width: 15px;
+	height: 15px;
+	background-color: #000000;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+}
+
+#close:hover {
+	background-color: #ffffff;
+	color: #000000;
+	border: 2px solid #000000;
+}
+
+/* Footer */
+#footer {
+	position: fixed;
+	left: 10px;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
 }

@@ -3,27 +3,35 @@ var socket = io.connect('/');
 
 // CREATE UNIQUE USERCOLOR -------------------
 var userColor = Math.floor(Math.random() * (0xc0c0c0 - 0x707070 + 1)) + 0x707070;
+// Unused, but I want to keep them around
+// var userR = parseInt(userColor.toString(16).substr(0,2), 16);
+// var userG = parseInt(userColor.toString(16).substr(2,2), 16);
+// var userB = parseInt(userColor.toString(16).substr(4,2), 16);
 
 
 // INITIALIZE KEYBOARD MAPS -------------------
 
+// Middle C is 261.625hz
 var c1 = 261.626;
 
 var keys = ["c1", "d1f", "d1", "e1f", "e1", "f1", "g1f", "g1", "a1f", "a1", "b1f", "b1", "c2", "d2f", "d2", "e2f", "e2", "f2", "g2f", "g2", "a2f", "a2", "b2f", "b2", "c3"];
 
-
+// Make array of 0s as long as keys
 var iokeys = keys.map(function() {
 	return 0;
 });
 
+// Make array of key divs from page
 var keyboard = keys.map(function(i) {
 	return document.getElementById(i);
 });
 
+// Make array of 255s as long as keys
 var heatmap = keys.map(function(i) {
 	return 255;
 });
 
+// Make array of portal divs from page
 var portals = keys.map(function(i) {
 	return document.getElementById(i + "-p");
 });
@@ -31,8 +39,10 @@ var portals = keys.map(function(i) {
 // INITIALIZE PIANO ROLL -------------------
 var score = document.getElementById("score");
 var rollWidth = score.scrollWidth;
-var noteWidth = 4;
+var noteWidth = 2;
 
+// Add column of divs as tall as there are keys. Color them accoding to iokeys array passed in.
+// This gets called in two places: on page load (generating the piano roll from scratch), and when keys are played.
 var addRollColumn = function(array) {
 	var column = document.createElement("div");
 	column.style.width = noteWidth.toString() + "px";
@@ -53,15 +63,17 @@ var addRollColumn = function(array) {
 	pianoRoll.push(column);
 }
 
+// Fill the roll with columns
 var pianoRoll = [];
 for (var i = 0; i < (rollWidth / noteWidth); i++) {
-	addRollColumn(iokeys)
+	addRollColumn(iokeys);
 };
 
 
 
 // MOUSE CONTROL -------------------
 
+// On click, set iokeys[i] to userColor
 document.body.onmousedown = function(e) {
 	e = e || window.event;
 	var elementId = e.target.id;
@@ -72,6 +84,7 @@ document.body.onmousedown = function(e) {
 	send();
 };
 
+// On release, set iokeys[i] to 0
 document.body.onmouseup = function(e) {
 	e = e || window.event;
 	var elementId = e.target.id;
@@ -84,6 +97,7 @@ document.body.onmouseup = function(e) {
 
 // KEYBOARD CONTROL ----------------
 
+// Create array of charCodes to use for keyboard playing
 var keychars = keys.map(function(i) {
 	num = document.getElementById(i).firstElementChild.innerHTML.charCodeAt(0);
 	// .charCodeAt returns ASCII values, and .keyCode returns Unicode. This obviously isn't helpful.
@@ -99,6 +113,7 @@ var keychars = keys.map(function(i) {
 	}
 });
 
+// On press, set iokeys[i] to userColor
 window.onkeydown = function(e) {
 	var c = e.which || e.keyCode;
 	var n = keychars.indexOf(c);
@@ -107,6 +122,7 @@ window.onkeydown = function(e) {
 	send();
 };
 
+// On release, set iokeys[i] to 0
 window.onkeyup = function(e) {
 
 	var c = e.which || e.keyCode;
@@ -118,12 +134,15 @@ window.onkeyup = function(e) {
 
 // SOUND CONTROL -------------------
 
+// These ratios are from the harmonic series, which means this piano plays in Just Temperament, not Equal. That's fun.
 var harmonics = [1., 17 / 16, 9 / 8, 19 / 16, 5 / 4, 21 / 16, 11 / 8, 3 / 2, 13 / 8, 27 / 16, 7 / 4, 15 / 8, 1. * 2, 17 / 16 * 2, 9 / 8 * 2, 19 / 16 * 2, 5 / 4 * 2, 21 / 16 * 2, 11 / 8 * 2, 3 / 2 * 2, 13 / 8 * 2, 27 / 16 * 2, 7 / 4 * 2, 15 / 8 * 2, 1. * 4];
 
+// Create array of frequencies as long as harmonics
 var frequencies = harmonics.map(function(i) {
 	return i * c1;
 });
 
+// Create an array of audio samples from each key
 var audioLibSamples = frequencies.map(function(hz) {
 	param = ["sin",0.0000,0.4000,0.20,0.25,0.0000,0.10,20.0000,hz,20.0000,1.0000,1.0000,0.0000,0.0100,-0.3000,-1.0000,1.0000,0.0000,0.0000,-1.0000,0.0,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,-1.0000];
 
@@ -132,24 +151,45 @@ var audioLibSamples = frequencies.map(function(hz) {
 });
 
 
+// SAY HELLO ON LOAD ------------------
+// Send message on load to update number of connections
+window.onload = function() {
+	send();
+};
+
 // SEND AND RECEIVE ------------------
 
+// Emit a message consisting of iokeys whenever send() is called
 var send = function() {
 	socket.emit('message', {"iokeys" : iokeys});
 };
 
 // Connection counter
+var footerDiv = document.getElementById("footer");
+var connectionsDiv = document.getElementById("connections");
+var instructionsDiv = document.getElementById("instructions");
 var connectionCounter = function(connections) {
 	var val = Math.round(connections * 10);
 	document.body.style.background = "rgb(" + [val, val, val].join(",") + ")";
 
-	if (connections > 13) {
-		document.getElementById("instructions").style.color = "#303030";
-	} else {
-		document.getElementById("instructions").style.color = "#bbbbbb";
+	// Change text colors according to number of connections, i.e., background color of page.
+	// TODO: Adjust colors according to actual background color, not an estimate from connections
+	if (connections == 1) {
+		footerDiv.style.color = "#bbbbbb";
+		connectionsDiv.innerHTML = "You're all alone.";
+		instructionsDiv.style.color = "#bbbbbb";
+	} else if (connections > 1 && connections < 13) {
+		footerDiv.style.color = "#bbbbbb";
+		connectionsDiv.innerHTML = connections + " musicians";
+		instructionsDiv.style.color = "#bbbbbb";
+	} else if (connections >= 13) {
+		footerDiv.style.color = "#303030";
+		connectionsDiv.innerHTML = connections + " musicians";
+		instructionsDiv.style.color = "#303030";
 	}
 };
 
+// All-important receive function. Does things upon receipt of message from server.
 var receive = function(msg) {
 
 	for (var i = 0; i < portals.length; i++) {
