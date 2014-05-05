@@ -41,10 +41,10 @@ var addRollColumn = function(array) {
 
 	for (var j = 0; j < array.length; j++) {
 		var row = document.createElement("div");
-		if (array[j] == 0) {
+		if (array[array.length - 1 - j] == 0) {
 			row.style.background = "#303030";
 		} else {
-			row.style.background = "#" + array[j].toString(16);
+			row.style.background = "#" + array[array.length - 1 - j].toString(16);
 		}
 		row.className = "rollRow";
 		column.appendChild(row);
