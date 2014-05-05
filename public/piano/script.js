@@ -2,7 +2,7 @@
 var socket = io.connect('/');
 
 // CREATE UNIQUE USERCOLOR -------------------
-var userColor = Math.round(Math.random() * 0xFFFFFF);
+var userColor = Math.floor(Math.random() * (0xc0c0c0 - 0x707070 + 1)) + 0x707070;
 
 
 // INITIALIZE KEYBOARD MAPS -------------------
@@ -144,11 +144,9 @@ var connectionCounter = function(connections) {
 	document.body.style.background = "rgb(" + [val, val, val].join(",") + ")";
 
 	if (connections > 13) {
-		document.getElementById("instructions").style.color = "#303030"
-		document.getElementsByTagName("a").style.color = "#303030"
+		document.getElementById("instructions").style.color = "#303030";
 	} else {
-		document.getElementById("instructions").style.color = "#bbbbbb"
-		document.getElementsByTagName("a").style.color = "#bbbbbb"
+		document.getElementById("instructions").style.color = "#bbbbbb";
 	}
 };
 
