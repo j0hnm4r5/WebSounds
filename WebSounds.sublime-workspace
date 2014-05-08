@@ -1,1 +1,1228 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"use",
+				"userB"
+			],
+			[
+				"us",
+				"userR"
+			],
+			[
+				"ins",
+				"instructionsDiv"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"backc",
+				"background-color"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"rol",
+				"rollColumn"
+			],
+			[
+				"col",
+				"column"
+			],
+			[
+				"ro",
+				"rollWidth"
+			],
+			[
+				"no",
+				"noteHeight"
+			],
+			[
+				"ke",
+				"keys"
+			],
+			[
+				"he",
+				"heatmap"
+			],
+			[
+				"key",
+				"keyboard"
+			],
+			[
+				"foo",
+				"footerDiv"
+			],
+			[
+				"connect",
+				"connections"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"co",
+				"CONTROL"
+			],
+			[
+				"mc",
+				"micL"
+			],
+			[
+				"las",
+				"last_pos"
+			],
+			[
+				"chi",
+				"chunk_size"
+			],
+			[
+				"sc",
+				"scale_factor"
+			],
+			[
+				"plot",
+				"plotterY"
+			],
+			[
+				"vol",
+				"volume_unitizedL"
+			],
+			[
+				"m",
+				"min_vol"
+			],
+			[
+				"ma",
+				"max_vol"
+			],
+			[
+				"lt",
+				"lateral_diff"
+			],
+			[
+				"ev",
+				"event"
+			],
+			[
+				"win",
+				"windowX"
+			],
+			[
+				"min",
+				"min_vol"
+			],
+			[
+				"la",
+				"lateral_diff"
+			],
+			[
+				"roll",
+				"rolling_volumeL"
+			],
+			[
+				"ra",
+				"raw_samples"
+			],
+			[
+				"pr",
+				"process"
+			],
+			[
+				"pro",
+				"processdef"
+			],
+			[
+				"vo",
+				"volume"
+			],
+			[
+				"row",
+				"row_height"
+			],
+			[
+				"pi",
+				"pitch"
+			],
+			[
+				"pit",
+				"pitch"
+			],
+			[
+				"max",
+				"max_vol"
+			],
+			[
+				"ini",
+				"init_time"
+			],
+			[
+				"Obj",
+				"ObjectLayer"
+			],
+			[
+				"r",
+				"r_val"
+			],
+			[
+				"sur",
+				"surfaces_to_be_sorted"
+			],
+			[
+				"find_",
+				"find_epicenter"
+			],
+			[
+				"com",
+				"combo"
+			],
+			[
+				"dr",
+				"draw"
+			],
+			[
+				"tr",
+				"triangle"
+			],
+			[
+				"dis",
+				"dist"
+			],
+			[
+				"pt",
+				"pt1"
+			],
+			[
+				"sta",
+				"station"
+			],
+			[
+				"int",
+				"intersections"
+			],
+			[
+				"in",
+				"intersection_list"
+			],
+			[
+				"find",
+				"find_triangle"
+			],
+			[
+				"chec",
+				"check_for_intersections"
+			],
+			[
+				"ch",
+				"check_for_intersections"
+			],
+			[
+				"lo",
+				"loc"
+			],
+			[
+				"othe",
+				"other_pt"
+			],
+			[
+				"se",
+				"speed_of_sound"
+			],
+			[
+				"tim",
+				"time_heard"
+			],
+			[
+				"or",
+				"origin"
+			],
+			[
+				"dra",
+				"draw_pt"
+			],
+			[
+				"act",
+				"actual_dist"
+			],
+			[
+				"Tr",
+				"Triangle_Point"
+			],
+			[
+				"loc",
+				"location"
+			],
+			[
+				"sou",
+				"sound_loc"
+			],
+			[
+				"soun",
+				"sound_dispersion"
+			],
+			[
+				"wo",
+				"windowX"
+			],
+			[
+				"orig",
+				"orig_color"
+			],
+			[
+				"spr",
+				"sprite_rect"
+			],
+			[
+				"ti",
+				"tite_rects"
+			],
+			[
+				"mite",
+				"mite_rects"
+			],
+			[
+				"re",
+				"rect_list"
+			],
+			[
+				"li",
+				"live_cave_rects"
+			],
+			[
+				"sp",
+				"sprite_rect"
+			],
+			[
+				"ce",
+				"centerY"
+			],
+			[
+				"ran",
+				"randint"
+			],
+			[
+				"be",
+				"beats_per_level"
+			],
+			[
+				"d",
+				"difficulty"
+			],
+			[
+				"v",
+				"vocal_range"
+			],
+			[
+				"w",
+				"windowY"
+			],
+			[
+				"so",
+				"song"
+			],
+			[
+				"song",
+				"song_gen"
+			],
+			[
+				"upd",
+				"update_mites"
+			],
+			[
+				"px",
+				"px_width"
+			],
+			[
+				"last_",
+				"last_volumes"
+			],
+			[
+				"p",
+				"pitch"
+			],
+			[
+				"roun",
+				"round_to"
+			],
+			[
+				"not",
+				"note"
+			],
+			[
+				"f",
+				"figured"
+			],
+			[
+				"tw",
+				"tweet"
+			],
+			[
+				"rou",
+				"round_to"
+			],
+			[
+				"n",
+				"note_map"
+			],
+			[
+				"new",
+				"new_york"
+			],
+			[
+				"sca",
+				"scale_down_followers"
+			],
+			[
+				"num",
+				"num_connections"
+			],
+			[
+				"gl",
+				"global_coord_x"
+			],
+			[
+				"glo",
+				"global"
+			],
+			[
+				"followers",
+				"followers_count"
+			],
+			[
+				"nod",
+				"node_color"
+			],
+			[
+				"de",
+				"decode"
+			],
+			[
+				"ne",
+				"new_york"
+			],
+			[
+				"wr",
+				"writerow"
+			],
+			[
+				"fr",
+				"frame"
+			],
+			[
+				"fra",
+				"frames"
+			],
+			[
+				"from",
+				"fromarray"
+			],
+			[
+				"vi",
+				"video_file"
+			],
+			[
+				"fo",
+				"fourcc"
+			],
+			[
+				"ff",
+				"FFMpegWriter"
+			],
+			[
+				"frm",
+				"frame"
+			],
+			[
+				"mo",
+				"movie_load"
+			],
+			[
+				"Vote",
+				"VoteForm"
+			],
+			[
+				"rand",
+				"random_q"
+			],
+			[
+				"Ques",
+				"Question"
+			],
+			[
+				"t",
+				"type	Attr"
+			],
+			[
+				"meta",
+				"display_meta"
+			],
+			[
+				"form",
+				"form_valid"
+			],
+			[
+				"Qu",
+				"QuestionDetailView"
+			],
+			[
+				"rende",
+				"render_to_response"
+			],
+			[
+				"Quest",
+				"QuestionForm"
+			],
+			[
+				"ques",
+				"questioning"
+			],
+			[
+				"fil",
+				"fileCount"
+			],
+			[
+				"a",
+				"acceleration"
+			],
+			[
+				"at",
+				"atan2"
+			],
+			[
+				"the",
+				"theta"
+			],
+			[
+				"le",
+				"length"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/piano/script.js",
+			"settings":
+			{
+				"buffer_size": 6779,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 813,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1108,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/piano/index.html",
+			"settings":
+			{
+				"buffer_size": 7317,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/piano/style.css",
+			"settings":
+			{
+				"buffer_size": 2195,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"jin",
+				"Set Syntax: HTML (Jinja Templates)"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pro",
+				"Project: Save As"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ji",
+				"Set Syntax: HTML (Jinja Templates)"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Add Repository"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"pr",
+				"Package Control: Remove Package"
+			],
+			[
+				"pai",
+				"Package Control: Install Package"
+			],
+			[
+				"par",
+				"Package Control: Remove Package"
+			],
+			[
+				"sub",
+				"SublimeREPL: Python"
+			],
+			[
+				"paci",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"p",
+				"Package Control: List Packages"
+			],
+			[
+				"py",
+				"Python: Test"
+			],
+			[
+				"pin",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"init_db()",
+			"python",
+			"import math",
+			"which python"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/johnmars/Development/WebSounds/public/index.html",
+		"/Users/johnmars/Development/WebSounds/public/piano/style.css",
+		"/Users/johnmars/Development/WebSounds/.gitignore",
+		"/Users/johnmars/Development/WebSounds/README.md",
+		"/Users/johnmars/Website/DJANGO/gitignore",
+		"/Users/johnmars/Website/DJANGO/.gitignore",
+		"/Users/johnmars/Development/WebSounds/Procfile",
+		"/Users/johnmars/.zshrc",
+		"/Users/johnmars/Development/WebSounds/server.js",
+		"/Users/johnmars/Development/WebSounds/public/style.css",
+		"/Users/johnmars/Development/WebSounds/public/webaudiox.js",
+		"/Users/johnmars/Development/WebSounds/3DSound.sublime-project",
+		"/Users/johnmars/Downloads/tape.py",
+		"/Users/johnmars/Development/3DSound/upDownInOutBall.py",
+		"/Users/johnmars/Development/3DSound/simpleStreamProcesses.py",
+		"/Users/johnmars/Development/3DSound/simpleStream.py",
+		"/Users/johnmars/Development/3DSound/midipygame.py",
+		"/Users/johnmars/Development/3DSound/volumeChecker.py",
+		"/Users/johnmars/Development/3DSound/voiceTrace.py",
+		"/Users/johnmars/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/johnmars/.virtualenvs/3DSound/lib/python2.7/site-packages/analyse.py",
+		"/Users/johnmars/Documents/Archive/Archive 13-14/Fall 2013/ThesisBoard/streamTrendingSpeak.py",
+		"/Users/johnmars/Documents/Archive/Archive 13-14/Fall 2013/ThesisBoard/streamToSpeech.py",
+		"/Users/johnmars/Development/3DSound/songwriter_toScreen.py",
+		"/Users/johnmars/.virtualenvs/3DSound/lib/python2.7/site-packages/pyaudio.py",
+		"/Users/johnmars/Development/3DSound/notes.txt",
+		"/Users/johnmars/Development/3DSound/epicenter.py",
+		"/Users/johnmars/Development/3DSound/cave.py",
+		"/Users/johnmars/Development/3DSound/midi/0.mid",
+		"/Users/johnmars/Documents/Archive/Archive 12-13/Spring 2013/Computing Drawing/SCRIPTS/BezierRecursive.py",
+		"/Users/johnmars/Desktop/songwriterbottt.html",
+		"/Users/johnmars/Development/3DSound/sandbox2.py",
+		"/Users/johnmars/Development/3DSound/colors.py",
+		"/Users/johnmars/Development/3DSound/epicenter_mouse.py",
+		"/Users/johnmars/Development/3DSound/sandbox3.py",
+		"/Users/johnmars/Development/3DSound/sandbox4.py",
+		"/Users/johnmars/Development/3DSound/.gitignore",
+		"/Users/johnmars/Development/3DSound/voicecopter.py",
+		"/Users/johnmars/Development/3DSound/songwriter.py",
+		"/Users/johnmars/Development/3DSound/oscToSpeaker2.py",
+		"/Users/johnmars/Development/3DSound/oscToSpeaker.py",
+		"/Users/johnmars/Development/LiveCity/exampleTweet.json",
+		"/Users/johnmars/Development/3DSound/sandbox.py",
+		"/Users/johnmars/Documents/Archive/Archive 13-14/Fall 2013/ThesisBoard/streamSandbox.py",
+		"/Users/johnmars/Development/EDR/2_2/streamToGraphViz.py",
+		"/Users/johnmars/Development/3DSound/twitterCredentials.py",
+		"/Users/johnmars/Development/3DSound/3DSound.sublime-project",
+		"/Users/johnmars/Development/3DMapsModels/NokiaWebGL/tiles.py",
+		"/Users/johnmars/Development/piggyphoto/piggyphoto/__init__.py",
+		"/Users/johnmars/Development/LiveCity/streamToGraphVizWithSoundandColor.py",
+		"/Users/johnmars/Development/LiveCity/streamToGraphVizRadiateWithSound.py",
+		"/Users/johnmars/Downloads/outputpenplot195924.hpgl",
+		"/Users/johnmars/Development/LiveCity/sandbox2.py",
+		"/Users/johnmars/Development/LiveCity/twitterCredentials.py",
+		"/Users/johnmars/Development/LiveCity/drawGraph.py",
+		"/Users/johnmars/Development/LiveCity/twitterStream.py",
+		"/Users/johnmars/Development/EDR/EDR.sublime-project",
+		"/Users/johnmars/Google Drive/edr_sp14/individual/John_Mars/Week1/rgbColorBars.ndbx",
+		"/Users/johnmars/Development/EDR/twitterCSVGen.py",
+		"/Users/johnmars/Development/EDR/ranbowCSVGen.py",
+		"/Users/johnmars/Development/EDR/fibonacciGen.py",
+		"/Users/johnmars/Downloads/pynum2word-0.3/num2word_EN.py",
+		"/Users/johnmars/Downloads/pynum2word-0.3/num2word_EU.py",
+		"/Users/johnmars/Downloads/pynum2word-0.3/num2word_base.py",
+		"/Users/johnmars/Downloads/pynum2word-0.3/num2word.py",
+		"/Users/johnmars/Development/EDR/twitterCoordinates.csv",
+		"/Users/johnmars/Documents/Archive/Archive 13-14/Fall 2013/ThesisBoard/streamPrinterTrendingSpeakBlink.py",
+		"/Users/johnmars/Development/LiveCity/gatherToDB.py",
+		"/Users/johnmars/Development/LiveCity/streamToViz.py",
+		"/Users/johnmars/Dropbox/Shape of Flight - Wintersession/John Mars/Week1/bounce.py",
+		"/Users/johnmars/Dropbox/Shape of Flight - Wintersession/John Mars/Week3/lineWindTunnel.py",
+		"/Users/johnmars/Dropbox/Shape of Flight - Wintersession/John Mars/Week4/wiggle2.py",
+		"/Users/johnmars/Development/liveEdges/openCViSight.py",
+		"/Users/johnmars/Downloads/lines/edges/frame10.png",
+		"/Users/johnmars/Development/liveEdges/saveLinesAndOrigFrames.py",
+		"/Users/johnmars/Development/liveEdges/images2gif.py",
+		"/Users/johnmars/Development/liveEdges/sobel-roberts_example.py",
+		"/Users/johnmars/Development/liveEdges/makeGray.py",
+		"/usr/local/Library/Formula/opencv.rb",
+		"/Users/johnmars/Development/liveEdges/canny_example.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/new.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/thanks.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/index.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/base.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/which.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/urls.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/vote_list.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/models.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/admin.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/forms.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/question_list.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/new_q.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/pc/settings.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/question_detail.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/templates/base.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/pc/urls.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/q/templates/q/all.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/forms.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/models.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/templates/questioning/ask.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/views.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/urls.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/templates/questioning/review.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/templates/questioning/question.html",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/admin.py",
+		"/Users/johnmars/Development/PersonalComputing/pc/questioning/templates/questioning/index.html",
+		"/Users/johnmars/Documents/ask.html",
+		"/Users/johnmars/Development/PersonalComputing/PersonalComputing.sublime-workspace",
+		"/Users/johnmars/Dropbox/Shape of Flight - Wintersession/John Mars/Week4/wiggle.py",
+		"/Users/johnmars/Documents/Archive/Archive 12-13/Spring 2013/Computing Drawing/SCRIPTS/BezierQuadraticRepetitionRandom.py",
+		"/Users/johnmars/Documents/Archive/Archive 12-13/Spring 2013/Computing Drawing/SCRIPTS/BezierQuadraticRepetition.py",
+		"/Users/johnmars/Documents/Archive 12-13/Spring 2013/Computing Drawing/SCRIPTS/BezierRecursive.py",
+		"/Users/johnmars/Documents/Archive 12-13/Spring 2013/Computing Drawing/SCRIPTS/BezierQuadratic.py",
+		"/Users/johnmars/Dropbox/Shape of Flight - Wintersession/John Mars/Week3/universe.py",
+		"/Users/johnmars/Library/Application Support/Sublime Text 3/Packages/User/PygameBuild.sublime-build",
+		"/Users/johnmars/Library/Application Support/Sublime Text 3/Packages/User/PyProcessingBuild.sublime-build",
+		"/Users/johnmars/Development/PythonDev/threadingQueue.py",
+		"/Users/johnmars/Documents/Archive 13-14/Fall 2013/ThesisBoard/streamThreadQueue.py",
+		"/Users/johnmars/Development/LiveCity/sandbox3.py",
+		"/Users/johnmars/Development/LiveCity/sandbox.py",
+		"/Users/johnmars/Development/LiveCity/liveUpdateFromDB.py",
+		"/Users/johnmars/Development/LiveCity/.gitignore",
+		"/Users/johnmars/Development/LiveCity/deleteItemInDB.py",
+		"/Users/johnmars/Development/LiveCity/sandbox.json",
+		"/Users/johnmars/Documents/Archive 13-14/Fall 2013/ThesisBoard/streamPrinterTrendingSpeakBlink.py",
+		"/Users/johnmars/Development/LiveCity/README.html",
+		"/Users/johnmars/Development/LiveCity/LiveCity.sublime-project",
+		"/Users/johnmars/.zshrc.pre-oh-my-zsh"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"bootstrap.css",
+			"",
+			"bsc_catalog.txt",
+			"bright_star_catalog_reader.py",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"array",
+			"console.log(",
+			"20px",
+			"20",
+			"10px",
+			">",
+			"</a>",
+			"<a href=",
+			"</p>",
+			"<p>",
+			"</h2>",
+			"<h2>",
+			"heat",
+			"log",
+			"loadin",
+			"conso",
+			"color",
+			"i",
+			"for",
+			"newDiv",
+			"inner",
+			"heatmap[i]",
+			"0",
+			"heatmap[i]",
+			"val",
+			"document.getElementById(\"connections\")",
+			"document.getElementById(\"footer\")",
+			"color",
+			"fre",
+			"lib",
+			",",
+			"make",
+			"L",
+			"lateral_diff",
+			"volume2",
+			"volume1",
+			"samples2",
+			"raw_samples2",
+			"samples1",
+			"raw_samples1",
+			"last_volumes2",
+			"last_volumes1",
+			"stream1",
+			"stream2",
+			"last_volumes1",
+			"last_volumes",
+			"volume",
+			"samples",
+			"raw_samples",
+			"stream",
+			"style=\"display:none;\">",
+			"</div>",
+			"mins",
+			"maxs",
+			"q",
+			"p",
+			"start",
+			"1",
+			"samples1",
+			"raw_samples1",
+			"1",
+			"get_device_info_by_index",
+			"      :py:func:`get_device_info_by_index`\nget_device_count",
+			"get_device_count",
+			"count",
+			"Pa_GetDeviceCount",
+			"PaDeviceInfo",
+			"index",
+			"indec",
+			"pygame.",
+			"BLACK",
+			"row_height",
+			"10",
+			"2",
+			"zeros",
+			"vol",
+			"intersections",
+			"Vertex",
+			"pt",
+			"triangle",
+			"centroid",
+			"print",
+			"0",
+			"combos",
+			"]",
+			"triangle",
+			"1",
+			"other_pt",
+			"self",
+			"radical_dist",
+			"+",
+			"1",
+			"0",
+			"sound_loc",
+			"Triangle_Point",
+			"20",
+			"BLACK",
+			"MyMIDI",
+			"pitches",
+			"15",
+			"window",
+			"centerY",
+			"centerX",
+			"screen",
+			"0",
+			"last_note",
+			"+ 2",
+			"-",
+			"1",
+			"2 * ",
+			"song[beats]",
+			"24",
+			"tites",
+			"update_stala",
+			"0",
+			"USEREVENT",
+			"tites",
+			"300",
+			"tites",
+			"res",
+			"ones",
+			"zeros",
+			"windowX / px_width",
+			"res",
+			"samples1",
+			"stream1",
+			"raw_samples1",
+			"1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"warning",
+			"info",
+			"danger",
+			"primary",
+			"PRIMARY",
+			"DANGER",
+			"WARNING",
+			"INFO",
+			"1px solid #e6e6e6",
+			"warning",
+			"info",
+			"INFO",
+			"danger",
+			"BLUE",
+			"warning",
+			"BLUE",
+			"ORANGE",
+			"PURPLE",
+			"info",
+			"warning*****",
+			"#e6e6e6",
+			"#ff0039",
+			"#007fff",
+			"#0066cc",
+			"HOVERRED*****",
+			"LIGHTRED*****",
+			"HOVERBLUE*****",
+			"LIGHTBLUE*****",
+			".",
+			"+",
+			"$",
+			"",
+			"-",
+			".edu,",
+			"risd",
+			"0",
+			"@",
+			"catalog[",
+			" = self.",
+			" = ",
+			"star"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/piano/script.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6779,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4649,
+								4605
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3677.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								380
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								714,
+								714
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/piano/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7317,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								411,
+								411
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 470.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/piano/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "WebSounds.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
