@@ -240,8 +240,11 @@ var chatroom = document.getElementById("chatroom");
 var chatbox = chatroom.querySelector("#chatbox");
 var textbox = chatroom.querySelector("#textbox");
 var button = chatroom.querySelector("button");
+var re = /^[a-z0-9]+$/i
+
 function chatSend() {
 	var msg = textbox.textContent.trim();
+	msg = msg.replace(/[<>]/g, "");
 	textbox.innerHTML = "";
 
 	socket.emit("chat", {
