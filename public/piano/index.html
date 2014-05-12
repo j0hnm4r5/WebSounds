@@ -91,16 +91,28 @@
 	<div id="score" style="background-color: #ffffff;">
 	</div>
 
-	<div id="instructions">
-		<div id="close" onclick="parentNode.style.display = 'none'">x</div>
-		<h2>About WebSounds/piano</h2>
-		<p>WebSounds/piano is an interactive, collaborative music making machine.</p>
-		<h2>How to play</h2>
-		<p>Use your keyboard or mouse to hit the notes, and play along with everyone else. You can see who's playing what by looking at the piano roll along the bottom, and paying attention to the lights up top.</p>
-		<p>Notes gradually turn red the more you play them, and the background gets lighter the more people are playing.</p>
-		<h2>About the technology</h2>
-		<p>The app uses <a href="http://nodejs.org/">node.js</a> and <a href="http://socket.io/">socket.io</a> to connect users. Sound is generated in-browser using <a href="https://github.com/egonelbre/jsfx">jsfx</a>. WebSounds/piano runs on <a href="http://www.heroku.com">heroku.</a> It was designed by <a href="http://www.john-mars.com">John Mars</a> for Experimental Data Representation, a course at <a href="http://risd.edu/">RISD</a> in Spring 2014.</p>
+	<div id="bottom">
+		<div id="chatroom" style="width: 300px;">
+			<div id="chatbox"></div>
+			<div id="input">
+				<div id="textbox" contenteditable></div>
+				<button>Send</button>
+			</div>
+		</div>
+
+		<div id="instructions">
+			<div id="close" onclick="parentNode.style.display = 'none'">x</div>
+			<h2>About WebSounds/piano</h2>
+			<p>WebSounds/piano is an interactive, collaborative music making machine.</p>
+			<h2>How to play</h2>
+			<p>Use your keyboard or mouse to hit the notes, and play along with everyone else. You can see who's playing what by looking at the piano roll along the bottom, and paying attention to the lights up top.</p>
+			<p>Notes gradually turn red the more you play them, and the background gets lighter the more people are playing.</p>
+			<h2>About the technology</h2>
+			<p>The app uses <a href="http://nodejs.org/">Node.js</a> and <a href="http://socket.io/">Socket.io</a> to connect users. Sound is generated in-browser using <a href="https://github.com/egonelbre/jsfx">jsfx</a>. WebSounds/piano runs on <a href="http://www.heroku.com">Heroku</a>. You can see the entire project source on <a href="https://github.com/marsman12019/WebSounds">GitHub</a>. It was designed by <a href="http://www.john-mars.com">John Mars</a> for Experimental Data Representation, a course at <a href="http://risd.edu/">RISD</a> in Spring 2014.</p>
+		</div>
 	</div>
+
+
 
 	<div id="footer" style="color:#bbbbbb;">
 	<div id="connections">You're all alone.</div>
