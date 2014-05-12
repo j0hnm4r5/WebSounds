@@ -161,7 +161,19 @@ window.onload = function() {
 
 // Emit a message consisting of iokeys whenever send() is called
 var send = function() {
-	socket.emit('message', {"iokeys" : iokeys});
+
+	// Error check for people trying to break iokeys
+	iosum = iokeys.reduce(function(prev, cur, i, arr) {
+		if (cur != 0) {
+			cur = 1;
+		}
+		return prev + cur;
+	})
+
+	if (iosum <= 5) {
+		socket.emit('message', {"iokeys" : iokeys});
+	}
+
 };
 
 // Connection counter
