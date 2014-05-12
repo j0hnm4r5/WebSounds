@@ -3,10 +3,6 @@ var socket = io.connect('/');
 
 // CREATE UNIQUE USERCOLOR -------------------
 var userColor = Math.floor(Math.random() * (0xc0c0c0 - 0x707070 + 1)) + 0x707070;
-// Unused, but I want to keep them around
-// var userR = parseInt(userColor.toString(16).substr(0,2), 16);
-// var userG = parseInt(userColor.toString(16).substr(2,2), 16);
-// var userB = parseInt(userColor.toString(16).substr(4,2), 16);
 
 
 // INITIALIZE KEYBOARD MAPS -------------------
@@ -115,21 +111,29 @@ var keychars = keys.map(function(i) {
 
 // On press, set iokeys[i] to userColor
 window.onkeydown = function(e) {
-	var c = e.which || e.keyCode;
-	var n = keychars.indexOf(c);
-	iokeys[n] = userColor;
+	// If enter, send off chatSend(), below.
+	if (e.keyCode == 13 || e.charCode == 13) { // Enter key
+		chatSend();
+		return false;
+	}
 
-	send();
+	if (document.activeElement != textbox) {
+		var c = e.which || e.keyCode;
+		var n = keychars.indexOf(c);
+		iokeys[n] = userColor;
+		send();
+	}
 };
 
 // On release, set iokeys[i] to 0
 window.onkeyup = function(e) {
+	if (document.activeElement != textbox) {
+		var c = e.which || e.keyCode;
+		var n = keychars.indexOf(c);
+		iokeys[n] = 0;
 
-	var c = e.which || e.keyCode;
-	var n = keychars.indexOf(c);
-	iokeys[n] = 0;
-
-	send();
+		send();
+	}
 };
 
 // SOUND CONTROL -------------------
@@ -160,27 +164,26 @@ window.onload = function() {
 // SEND AND RECEIVE ------------------
 
 // Emit a message consisting of iokeys whenever send() is called
-var send = function() {
-
+function send() {
 	// Error check for people trying to break iokeys
 	iosum = iokeys.reduce(function(prev, cur, i, arr) {
-		if (cur != 0) {
-			cur = 1;
+		if (cur > 0) {
+			cur /= cur;
 		}
 		return prev + cur;
-	})
+	}, 0);
 
 	if (iosum <= 5) {
 		socket.emit('message', {"iokeys" : iokeys});
 	}
 
-};
+}
 
 // Connection counter
 var footerDiv = document.getElementById("footer");
 var connectionsDiv = document.getElementById("connections");
 var instructionsDiv = document.getElementById("instructions");
-var connectionCounter = function(connections) {
+function connectionCounter(connections) {
 	var val = Math.round(connections * 10);
 	document.body.style.background = "rgb(" + [val, val, val].join(",") + ")";
 
@@ -199,10 +202,10 @@ var connectionCounter = function(connections) {
 		connectionsDiv.innerHTML = connections + " musicians";
 		instructionsDiv.style.color = "#303030";
 	}
-};
+}
 
 // All-important receive function. Does things upon receipt of message from server.
-var receive = function(msg) {
+function receive(msg) {
 
 	for (var i = 0; i < portals.length; i++) {
 		if (msg[i] > 0) {
@@ -230,7 +233,35 @@ var receive = function(msg) {
 		}
 	};
 
-};
+}
+
+// CHAT ROOM ------------------
+var chatroom = document.getElementById("chatroom");
+var chatbox = chatroom.querySelector("#chatbox");
+var textbox = chatroom.querySelector("#textbox");
+var button = chatroom.querySelector("button");
+function chatSend() {
+	var msg = textbox.textContent.trim();
+	textbox.innerHTML = "";
+
+	socket.emit("chat", {
+		"msg" : msg,
+		"msgColor" : userColor
+	});
+}
+
+function chatReceive(msg, msgColor) {
+	var message = document.createElement("p");
+	message.style.color = "#" + msgColor.toString(16);
+	console.log(msgColor.toString(16));
+	message.innerHTML = msg;
+	chatbox.appendChild(message);
+	chatbox.scrollTop = 100000;
+}
+
+// On button click, initiate chatSend()
+button.addEventListener("click", chatSend, false);
+// If enter key is pressed, initiate send()
 
 // Send off array to receive() when sockets receives a message.
 socket.on('message', function(msg) {
@@ -241,3 +272,7 @@ socket.on('message', function(msg) {
 socket.on('connections', function(connections) {
 	connectionCounter(connections);
 });
+
+socket.on('chat', function(chat) {
+	chatReceive(chat.msg, chat.msgColor);
+})
