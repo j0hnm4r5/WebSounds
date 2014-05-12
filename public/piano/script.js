@@ -253,7 +253,9 @@ function chatSend() {
 function chatReceive(msg, msgColor) {
 	var message = document.createElement("p");
 	message.style.color = "#" + msgColor.toString(16);
-	console.log(msgColor.toString(16));
+	if (msgColor == userColor) {
+		message.style.textAlign = "right";
+	}
 	message.innerHTML = msg;
 	chatbox.appendChild(message);
 	chatbox.scrollTop = 100000;
