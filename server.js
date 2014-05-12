@@ -5,7 +5,6 @@ var express = require('express'),
 	socketServer = http.createServer(app),
 	io = require('socket.io').listen(socketServer);
 
-
 // Tell express to load any file in the public folder
 app.use(express.static(__dirname + '/public'));
 

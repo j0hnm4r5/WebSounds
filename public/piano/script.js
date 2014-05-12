@@ -8,6 +8,24 @@ var userColor = Math.floor(Math.random() * (0xc0c0c0 - 0x707070 + 1)) + 0x707070
 // var userG = parseInt(userColor.toString(16).substr(2,2), 16);
 // var userB = parseInt(userColor.toString(16).substr(4,2), 16);
 
+// INITIALIZE ROOMS -------------------
+roomBar = document.getElementById("rooms");
+numRooms = 4;
+rooms = [];
+for (var i = 0; i < numRooms; i++) {
+	var room = document.createElement("div");
+	room.style.width = (100 / numRooms).toString() + "%";
+	room.className = "room";
+	if (i == 0) {
+		room.id = "left";
+	}
+	if (i == numRooms - 1) {
+		room.id = "right";
+	}
+	roomBar.appendChild(room);
+	rooms.push(room);
+}
+
 
 // INITIALIZE KEYBOARD MAPS -------------------
 
